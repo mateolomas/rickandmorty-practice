@@ -32,10 +32,6 @@ function Card():JSX.Element {
         {status} - {species}
       </p>
     </section>
-
-
-
-
     <section>
       <span>Last know location:</span>
       <a href={location.url}>{location.name}</a>

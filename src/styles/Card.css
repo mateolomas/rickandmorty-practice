@@ -44,6 +44,8 @@ a:visited {
 
 .card-content {
   color: white;
+  height: 220px;
+  
   
     
 }
@@ -52,7 +54,7 @@ a:visited {
 section {
     display: flex;
     flex-direction: column;
-    margin-top: 10%;
+    margin-top: 15px;
     
     
 }
