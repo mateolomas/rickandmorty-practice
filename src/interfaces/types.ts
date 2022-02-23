@@ -50,3 +50,29 @@ export enum Status {
     Dead = "Dead",
     Unknown = "unknown",
 }
+
+export interface resultLocation {
+    id?:        number;
+    name:      string;
+    type:      string;
+    dimension: string;
+    residents: string[];
+    url:       string;
+    created:   Date;
+}
+
+export interface resultEpisode {
+    id?:         number;
+    name:       string;
+    air_date:   string;
+    episode:    string;
+    characters: string[];
+    url:        string;
+    created:    Date;
+}
+
+export interface AllInfo {
+    character : SingleCharacter;
+    location?: resultLocation;
+    episode?:  resultEpisode;
+}
