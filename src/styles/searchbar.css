@@ -13,9 +13,21 @@
 input {
     border: none;
     padding: 10px;
-    width: 85%;
+    width: 80%;
+    background-color: rgb(60, 61, 68);
 }
 
 button {
     border: none;
+    
+    background-color: rgb(60, 61, 68);
+    color: white;
+}
+
+
+@media screen and (max-width: 600px) {
+    .search-bar-container {
+        width: 50%;
+        
+    }
 }

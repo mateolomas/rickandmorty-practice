@@ -1,7 +1,6 @@
 a {
   text-decoration: none;
   color: white;
-  
 }
 
 a:visited {
@@ -14,58 +13,42 @@ a:visited {
   flex-direction: row;
   gap: 20px;
   flex-wrap: wrap;
-  justify-content: center; 
+  justify-content: center;
 }
 
 .card-image {
-    width: 40%;
+  width: 40%;
 }
 
 .card-image img {
-    
-    height: 100%;
-    width: 100%;
-    border-radius: 20px 0px 0px 20px;
-    
-
+  height: 100%;
+  width: 100%;
+  border-radius: 20px 0px 0px 20px;
+  object-fit: cover;
 }
 
 .card {
   background-color: rgb(60, 61, 68);
   display: flex;
   width: 600px;
-  height: 220px;
-  border-radius: 20px;
+  border-radius: 20px 20px 20px 20px; 
   gap: 10px;
-
 }
 
 .card-content {
   color: white;
-  height: 220px;
-  
-  
-    
 }
-
 
 section {
-    display: flex;
-    flex-direction: column;
-    margin-top: 15px;
-    
-    
+  display: flex;
+  flex-direction: column;
+  padding-top: 15px;
 }
 section span {
-    color: rgb(158,158,158);
-    font-weight: 500;
-    padding-bottom: 8px;
-    
-    
+  color: rgb(158, 158, 158);
+  font-weight: 500;
+  padding-bottom: 8px;
 }
-
-
-
 .icon {
   width: 10px;
   height: 10px;
@@ -75,8 +58,6 @@ section span {
   display: flex;
   flex-direction: row;
   align-items: center;
-  
-  
 }
 
 .title p {
@@ -93,12 +74,45 @@ h1 {
 }
 
 .modal-button {
-  
   text-align: center;
   text-decoration: none;
-  
+
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
-  
+}
+@media screen and (max-width: 600px) {
+  .cards-container {
+    display: flex;
+    justify-content: center;
+    
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 100%;
+    
+  }
+  .card-image {
+    object-fit: cover;
+    width: 100%;
+    
+  }
+  .card-image img {
+    border-radius: 20px 20px 0px 0px;
+    
+  }
+
+  .card-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    
+    
+  }
+
+
 }

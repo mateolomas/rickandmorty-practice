@@ -1,56 +1,34 @@
-import { Characters, Result} from '../interfaces/types';
+import { Characters, Result } from "../interfaces/types";
 import axios from "axios";
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
-function useFetchData() {
-
-  const [characterList, setCharacterList] = useState<Result[]>([]);
+function useFetchData(CharacterLocationEpisode: string) {
+  const [dataList, setDataList] = useState<Result[]>([]);
   const [loading, setLoading] = useState<Boolean>(false);
   const [error, setError] = useState<String>("");
 
-  const [LocationList, setLocationList] = useState<Result[]>([]);
-  const [EpisodeList, setEpisodeList] = useState<Result[]>([]);
-
-
-
-  const getCharacter = async () => {
+  const getData = async () => {
     try {
       setLoading(true);
 
-      const responseCharacter = await axios.get<Characters>('https://rickandmortyapi.com/api/character/');
-      const dataCharacter = await responseCharacter.data;
-
-      const responseLocation = await axios.get<Characters>('https://rickandmortyapi.com/api/location/');
-      const dataLocation = await responseLocation.data;
-      //const {results } = await responseLocation.data;
-
-      const responseEpisode = await axios.get<Characters>('https://rickandmortyapi.com/api/episode/');
-      const dataEpisode = await responseEpisode.data;
-
+      const url = `https://rickandmortyapi.com/api/${CharacterLocationEpisode}/`;
+      const responseData = await axios.get(url);
+      const dataType = await responseData.data;
       setLoading(false);
-      setCharacterList(dataCharacter.results);
-      setLocationList(dataLocation.results);
-      setEpisodeList(dataEpisode.results);
-
-
-    }
-    catch (error) {
-      setError("Ha ocurrido un error")
-    }
-    finally {
+      setDataList(dataType.results);
+    } catch (error) {
+      setError("Ha ocurrido un error");
+    } finally {
       setLoading(false);
     }
-
-
-  }
+  };
 
   useEffect(() => {
-    getCharacter();
-
+    getData();
+    
   }, []);
 
-
-  return { characterList, LocationList, EpisodeList, loading, error };
+  return { dataList, loading, error };
 }
 
-export default useFetchData
+export default useFetchData;

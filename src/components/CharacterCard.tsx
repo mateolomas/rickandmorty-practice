@@ -5,11 +5,8 @@ import red from "../assets/red.png";
 import grey from "../assets/grey.png";
 import Modal from "./Modal";
 
-function CharacterCard({
-  character,
-  episode,
-  location,
-}: AllInfo): JSX.Element {
+function CharacterCard({character}: AllInfo): JSX.Element 
+{
   return (
     <div className="card">
       <div className="card-image">
@@ -38,14 +35,12 @@ function CharacterCard({
           <a href={character.origin.url}>{character.origin.name}</a>
         </section>
 
+        <Modal character={character}  />
         
-
-        <Modal
-          character={character}
-          episode={episode}
-          location={location}
-        />
       </div>
+      
+      
+      
     </div>
   );
 }

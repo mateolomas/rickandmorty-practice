@@ -3,26 +3,36 @@
     height: 50px;
 }
 
+
 nav {
     
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
-    margin-left: 50px;
-    margin-right: 50px;
+    background-color: rgb(60, 61, 68);
 }
 
 li {
     text-decoration: none;
-    color: black;
+    
+    
 }
 
 ul {
     display: flex;
-    justify-content: space-between;
-    width: 20%;
+    justify-content: space-around   ;
+    width: 80%;
+    
 } 
 
+.title-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+   
+}
 header {
     display: flex;
     flex-direction: column;
@@ -31,9 +41,12 @@ header {
     height: 250px;
     margin-bottom: 50px;
     
+    
+    
 }
 
 header h1 {
     font-size: 90px;
     align-items: center;
+    
 }

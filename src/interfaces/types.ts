@@ -11,6 +11,7 @@ export interface Info {
 }
 
 export interface SingleCharacter {
+    id:          number;
     name:       string;
     status:     string;
     species:    string;
@@ -62,11 +63,11 @@ export interface resultLocation {
 }
 
 export interface resultEpisode {
-    id?:         number;
+    id:         number;
     name:       string;
-    air_date:   string;
+    air_date?:   string;
     episode:    string;
-    characters: string[];
+    characters?: string[];
     url:        string;
     created:    Date;
 }
@@ -75,4 +76,5 @@ export interface AllInfo {
     character : SingleCharacter;
     location?: resultLocation;
     episode?:  resultEpisode;
+    
 }

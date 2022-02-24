@@ -6,9 +6,10 @@ body.active-modal {
 
 .btn-modal {
     
-    display: block;
+    font-size: 10px;
+    padding: 30px;
     
-    font-size: 18px;
+    
 }
 
 .modal, .overlay {
@@ -30,11 +31,11 @@ body.active-modal {
     left: 50%;
     transform: translate(-50%, -50%);
     line-height: 1.4;
-    background: black;
+    background:  black;
     padding: 14px 28px;
     border-radius: 3px;
-    max-width: 600px;
-    min-width: 300px;
+    max-width: 700px;
+    min-width: 500px;
 }
 
 .close-modal {
@@ -42,4 +43,16 @@ body.active-modal {
     top: 10px;
     right: 10px;
     padding: 5px 7px;
+}
+
+@media screen and (max-width: 600px) {
+
+    .modal-content {
+        display: flex;
+        background:  green;
+        
+       
+        
+            }
+
 }
