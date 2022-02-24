@@ -27,16 +27,32 @@ body.active-modal {
 }
 .modal-content {
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    line-height: 1.4;
     background:  black;
     padding: 14px 28px;
-    border-radius: 3px;
-    max-width: 700px;
-    min-width: 500px;
+ 
+    
 }
+
+.modal-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+
+
+
 
 .close-modal {
     position: absolute;
@@ -47,12 +63,13 @@ body.active-modal {
 
 @media screen and (max-width: 600px) {
 
-    .modal-content {
+    .modal-wrapper {
         display: flex;
-        background:  green;
-        
-       
-        
-            }
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+    
+    }
 
 }

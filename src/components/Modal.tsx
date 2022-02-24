@@ -3,7 +3,7 @@ import { AllInfo } from '../interfaces/types';
 import "../styles/modal.css"
 import useFetchAllInfoById from '../hooks/useFetchAllInfo';
 
-function Modal({ character}: AllInfo): JSX.Element {
+function Modal({ character }: AllInfo): JSX.Element {
 
 
   const [idCharacter, setIdCharacter] = useState<number>(1);
@@ -55,20 +55,42 @@ function Modal({ character}: AllInfo): JSX.Element {
             <div className="modal">
               <div onClick={() => setModal(!modal)} className="overlay"></div>
               <div className="modal-content">
-                <div>
-                  <h1>Information about: {characterData.name}</h1>
-                    <p>Status: {characterData.status}</p>
-                    <p>Species: {characterData.species}</p>
-                      <img src={characterData.image} alt={characterData.name} />
-                  <h1>Location</h1>
-                    <p>{locationData.name}</p>
-                    <p>{locationData.dimension}</p>
-                    <p>{locationData.type}</p>
-                  <h1>Episode</h1>
-                    <p>{episodeData.name}</p>
-                    <p>{episodeData.episode}</p>
-                    <p>{episodeData.air_date}</p>
+                <div className="modal-wrapper">
+                  <div className="modal-header">
+                    <img src={characterData.image} alt={characterData.name} />
+                  </div>
+                  <div className="modal-body">
+                    <div className="modal-body-info">
+                      <h1>{characterData.name}</h1>
+                      <p>Status: {characterData.status}</p>
+                      <p>Species: {characterData.species}</p>
+                    </div>
+
+                    <div>
+                      <h1>Location</h1>
+                      <p>Name: {locationData.name}</p>
+                      <p>Dimension: {locationData.dimension}</p>
+                      <p>Type: {locationData.type}</p>
+                    </div>
+
+
+                    <div>
+                      <h1>Episode</h1>
+                      <p>Name: {episodeData.name}</p>
+                      <p>Episode: {episodeData.episode}</p>
+                      <p>Air date: {episodeData.air_date}</p>
+                    </div>
+
+
+
+                  </div>
+
+
+
+
                 </div>
+
+
                 <button className="close-modal" onClick={() => setModal(!modal)}>
                   CLOSE
                 </button>
