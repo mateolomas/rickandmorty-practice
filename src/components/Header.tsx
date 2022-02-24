@@ -2,6 +2,7 @@ import '../styles/header.css'
 const logo = require("../assets/rick-and-morty-31013.png");
 
 
+
 function Header() {
   return (
     <>
@@ -22,7 +23,7 @@ function Header() {
           </ul>
         </nav>
 
-      <div className="title-container">
+      <div >
         <h1>The Rick and Morty API</h1>
       </div>
         
