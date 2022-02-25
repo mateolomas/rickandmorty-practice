@@ -52,8 +52,8 @@ export enum Status {
     Unknown = "unknown",
 }
 
-export interface resultLocation {
-    id?:        number;
+export interface ResultLocation {
+    id:        number;
     name:      string;
     type:      string;
     dimension: string;
@@ -73,8 +73,15 @@ export interface resultEpisode {
 }
 
 export interface AllInfo {
-    character : SingleCharacter;
-    location?: resultLocation;
-    episode?:  resultEpisode;
+    character : Result;
+    location: ResultLocation;
+    episode:  resultEpisode;
     
 }
+
+export interface dataListInterface {
+    dataList: any[];
+    loading: boolean;
+    error: string;
+}
+
