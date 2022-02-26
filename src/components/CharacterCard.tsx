@@ -1,14 +1,19 @@
 import "../styles/Card.css";
-import { SingleCharacter, AllInfo } from '../interfaces/types';
+import {  AllInfo } from '../interfaces/types';
 import green from "../assets/green.png";
 import red from "../assets/red.png";
 import grey from "../assets/grey.png";
 import Modal from "./Modal";
-
-function CharacterCard({character}: AllInfo): JSX.Element 
+import { useState } from "react";
+function CharacterCard({character, location, episode}: AllInfo): JSX.Element 
 {
+  const [modal, setModal] = useState<Boolean>(false);
   return (
-    <div className="card">
+    <div className="card" 
+    onClick={() => {
+      setModal(!modal);
+    }}
+  >
       <div className="card-image">
         <img src={character.image} alt="Rick Sanchez" />
       </div>
@@ -28,17 +33,17 @@ function CharacterCard({character}: AllInfo): JSX.Element
         </section>
         <section>
           <span>Last know location:</span>
-          <a href={character.location.url}>{character.location.name}</a>
+          <a href={location.url}>{location.name}</a>
         </section>
         <section>
           <span>First seen in: </span>
-          <a href={character.origin.url}>{character.origin.name}</a>
+          <a href={episode.url}>{episode.name}</a>
         </section>
 
-        <Modal character={character}  />
+        
         
       </div>
-      
+      {modal && <Modal character={character} location={location} episode={episode}  />}
       
       
     </div>

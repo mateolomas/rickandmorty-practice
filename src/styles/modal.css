@@ -29,8 +29,9 @@ body.active-modal {
     position: absolute;
     top: 50%;
     left: 50%;
+   
     transform: translate(-50%, -50%);
-    background:  black;
+    background:  white;
     padding: 14px 28px;
  
     
@@ -47,10 +48,8 @@ body.active-modal {
 .modal-body {
     display: flex;
     flex-direction: column;
-    gap: 7px;
+    
 }
-
-
 
 
 
@@ -64,12 +63,35 @@ body.active-modal {
 @media screen and (max-width: 600px) {
 
     .modal-wrapper {
-        display: flex;
+        
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 50px;
-    
+        text-align: center;    
+        gap: 0px;
+        
     }
+
+    .modal-content {
+        border-radius: 20px;
+    }
+
+    .modal-content img {
+        width: 80%;
+        height: auto;
+        
+
+    }
+
+    .modal-body {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        font-size: 15px;
+        
+        
+    }
+      
+
+
+   
 
 }

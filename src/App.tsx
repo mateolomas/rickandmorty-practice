@@ -1,9 +1,9 @@
 import "../src/styles/app.css";
 
-import Card from "./components/Card";
+import Cards from "./components/Cards";
 import Header from "./components/Header";
 import Modal from "./components/Modal";
-import useFetchData from "./hooks/useFetchData";
+
 
 function App() {
 
@@ -13,7 +13,7 @@ function App() {
     <>
     <div className="App">
       <Header />
-      <Card /> 
+      <Cards /> 
     </div>
     </>
   );

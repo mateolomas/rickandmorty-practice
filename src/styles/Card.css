@@ -35,6 +35,11 @@ a:visited {
   gap: 10px;
 }
 
+.card:hover{
+  background-color: black;
+  
+}
+
 .card-content {
   color: white;
 }
@@ -102,6 +107,7 @@ h1 {
   .card-image img {
     border-radius: 20px 20px 0px 0px;
     
+    
   }
 
   .card-content {
@@ -109,6 +115,8 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+    padding-bottom: 20px;
 
     
     
